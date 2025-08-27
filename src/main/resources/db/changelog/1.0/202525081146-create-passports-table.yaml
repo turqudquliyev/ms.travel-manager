@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: 202525081146
+      author: Turgud Guliyev
+      changes:
+        - createTable:
+            tableName: passports
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    foreignKeyName: fk_guides_passports
+              - column:
+                  name: country
+                  type: VARCHAR(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: issue_date
+                  type: DATE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: expiry_date
+                  type: DATE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: passport_number
+                  type: VARCHAR(32)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValue: now()
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
