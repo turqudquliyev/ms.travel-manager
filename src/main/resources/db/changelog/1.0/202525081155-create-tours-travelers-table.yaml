@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 202525081153
+      author: Turgud Guliyev
+      changes:
+        - createTable:
+            tableName: tours_travellers
+            columns:
+              - column:
+                  name: tour_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_tours_travelers
+                    references: travelers(id)
+                    nullable: false
+              - column:
+                  name: traveler_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_travelers_tours
+                    references: travelers(id)
+                    nullable: false

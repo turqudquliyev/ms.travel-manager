@@ -1,0 +1,549 @@
+{
+	"info": {
+		"_postman_id": "1edc0de4-7e1e-4810-9d81-85ec0a94c02b",
+		"name": "ms.travel-manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26687306"
+	},
+	"item": [
+		{
+			"name": "CREATE TOUR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Tour name\",\r\n  \"price\": 100.00,\r\n  \"description\": \"Tour description\",\r\n  \"endDate\": \"2025-08-27\",\r\n  \"startDate\": \"2025-08-28\",\r\n  \"destinations\": [\r\n    {\r\n      \"location\": \"Baku\",\r\n      \"description\": \"Baku\",\r\n      \"visitDate\": \"2025-08-27\"\r\n    },\r\n    {\r\n      \"location\": \"Sumgait\",\r\n      \"description\": \"Sumgait\",\r\n      \"visitDate\": \"2025-08-28\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/tours",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tours"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CREATED",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Tour name\",\r\n  \"price\": 100.00,\r\n  \"description\": \"Tour description\",\r\n  \"endDate\": \"2025-08-27\",\r\n  \"startDate\": \"2025-08-28\",\r\n  \"destinations\": [\r\n    {\r\n      \"location\": \"Baku\",\r\n      \"description\": \"Baku\",\r\n      \"visitDate\": \"2025-08-27\"\r\n    },\r\n    {\r\n      \"location\": \"Sumgait\",\r\n      \"description\": \"Sumgait\",\r\n      \"visitDate\": \"2025-08-28\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/tours",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"tours"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 11:46:21 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "GET ALL TOURS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/tours?page=0&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tours"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Tour name\",\r\n  \"price\": 100.00,\r\n  \"description\": \"Tour description\",\r\n  \"endDate\": \"2025-08-27\",\r\n  \"startDate\": \"2025-08-28\",\r\n  \"destinations\": [\r\n    {\r\n      \"location\": \"Baku\",\r\n      \"description\": \"Baku\",\r\n      \"visitDate\": \"2025-08-27\"\r\n    },\r\n    {\r\n      \"location\": \"Sumgait\",\r\n      \"description\": \"Sumgait\",\r\n      \"visitDate\": \"2025-08-28\"\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/tours?page=0&size=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"tours"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 11:47:04 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"name\": \"Tour name\",\n            \"price\": 100\n        }\n    ],\n    \"totalPages\": 1,\n    \"totalElements\": 1,\n    \"hasNext\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "GET TOUR BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/tours/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tours",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/tours/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"tours",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 11:47:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Tour name\",\n    \"price\": 100,\n    \"description\": \"Tour description\",\n    \"endDate\": \"2025-08-27\",\n    \"startDate\": \"2025-08-28\",\n    \"travelers\": [],\n    \"destinations\": [\n        {\n            \"location\": \"Baku\",\n            \"description\": \"Baku\",\n            \"visitDate\": \"2025-08-27\"\n        },\n        {\n            \"location\": \"Sumgait\",\n            \"description\": \"Sumgait\",\n            \"visitDate\": \"2025-08-28\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "ADD NEW TRAVELER TO TOUR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"hey@gmail.com\",\r\n  \"lastName\": \"hey\",\r\n  \"firstName\": \"hey\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/tours/1/travelers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tours",
+						"1",
+						"travelers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CREATED",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"hey@gmail.com\",\r\n  \"lastName\": \"hey\",\r\n  \"firstName\": \"hey\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/tours/1/travelers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"tours",
+								"1",
+								"travelers"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 11:48:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "CREATE GUIDE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Turgud\",\r\n  \"email\": \"turgud@gmail.com\",\r\n  \"phoneNumber\": \"hey\",\r\n  \"passport\": {\r\n    \"country\": \"hey\",\r\n    \"issueDate\": \"2025-08-27\",\r\n    \"expiryDate\": \"2025-08-27\",\r\n    \"passportNumber\": \"hey\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/guides",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"guides"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CREATED",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Turgud\",\r\n  \"email\": \"turgud@gmail.com\",\r\n  \"phoneNumber\": \"hey\",\r\n  \"passport\": {\r\n    \"country\": \"hey\",\r\n    \"issueDate\": \"2025-08-27\",\r\n    \"expiryDate\": \"2025-08-27\",\r\n    \"passportNumber\": \"hey\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/guides",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"guides"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 11:50:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "GET ALL GUIDES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/guides",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"guides"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/guides",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"guides"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 11:58:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"name\": \"Turgud\",\n            \"email\": \"turgud@gmail.com\",\n            \"phoneNumber\": \"hey\"\n        }\n    ],\n    \"totalPages\": 1,\n    \"totalElements\": 1,\n    \"hasNext\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "ASSIGN GUIDE TO TOUR",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/guides/1/tours/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"guides",
+						"1",
+						"tours",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "NO CONTENT",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/guides/1/tours/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"guides",
+								"1",
+								"tours",
+								"1"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 11:51:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}

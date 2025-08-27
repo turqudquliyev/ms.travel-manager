@@ -5,9 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import static org.springframework.boot.SpringApplication.run;
 
 @SpringBootApplication
-public class Application {
+public class TravelManagerApplication {
 
     public static void main(String[] args) {
-        run(Application.class, args);
+        run(TravelManagerApplication.class, args);
     }
 }
